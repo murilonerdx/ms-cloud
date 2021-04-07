@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="tb_worker")
+@Table(name = "tb_worker")
 public class Worker implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class Worker implements Serializable {
         this.dailyIncome = dailyIncome;
     }
 
-    public Worker(){
+    public Worker() {
 
     }
 
