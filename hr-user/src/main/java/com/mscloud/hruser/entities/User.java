@@ -1,4 +1,4 @@
-package com.mscloud.hruser.entity;
+package com.mscloud.hruser.entities;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -11,6 +11,7 @@ public class User {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Column(unique=true)
     private String email;
     private String password;
 
@@ -57,4 +58,13 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
 }

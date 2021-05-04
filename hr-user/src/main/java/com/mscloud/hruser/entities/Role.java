@@ -1,4 +1,4 @@
-package com.mscloud.hruser.entity;
+package com.mscloud.hruser.entities;
 
 import javax.persistence.*;
 
