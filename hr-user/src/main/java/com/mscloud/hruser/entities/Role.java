@@ -3,7 +3,7 @@ package com.mscloud.hruser.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name="tb_role")
+@Table(name = "tb_role")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,8 +11,7 @@ public class Role {
     private String roleName;
 
 
-
-    public Role(){
+    public Role() {
 
     }
 

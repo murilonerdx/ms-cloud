@@ -40,10 +40,10 @@ public class WorkerResource {
         return ResponseEntity.ok().body(listWorker);
     }
 
-    @GetMapping(value="/configs")
+    @GetMapping(value = "/configs")
     public ResponseEntity<Void> getConfigs() {
-       logger.info("Config = "+ testConfig);
-       return ResponseEntity.noContent().build();
+        logger.info("Config = " + testConfig);
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping(value = "/{id}")
