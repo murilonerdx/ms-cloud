@@ -22,10 +22,6 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value = "/workers")
 public class WorkerResource {
-
-    @Value("${test.config}")
-    private String testConfig;
-
     @Autowired
     private Environment env;
 
@@ -42,7 +38,6 @@ public class WorkerResource {
 
     @GetMapping(value = "/configs")
     public ResponseEntity<Void> getConfigs() {
-        logger.info("Config = " + testConfig);
         return ResponseEntity.noContent().build();
     }
 

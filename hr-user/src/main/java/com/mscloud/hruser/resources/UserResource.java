@@ -20,22 +20,15 @@ public class UserResource {
     @Autowired
     private UserRepository repository;
 
-
-    @GetMapping
-    public ResponseEntity<List<User>> findAll() {
-        List<User> listWorker = repository.findAll();
-        return ResponseEntity.ok().body(listWorker);
-    }
-
     @GetMapping(value = "/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
-        User user = repository.findById(id).get();
-        return ResponseEntity.ok(user);
+        User obj = repository.findById(id).get();
+        return ResponseEntity.ok(obj);
     }
 
     @GetMapping(value = "/search")
     public ResponseEntity<User> findByEmail(@RequestParam String email) {
-        User user = repository.findByEmail(email);
-        return ResponseEntity.ok(user);
+        User obj = repository.findByEmail(email);
+        return ResponseEntity.ok(obj);
     }
 }
